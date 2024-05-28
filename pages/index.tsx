@@ -7,6 +7,7 @@ import {
   OrderedList,
   ListItem,
 } from '@chakra-ui/react';
+import ModuleList from '@/components/module-list';
 
 function Home() {
   return (
@@ -18,13 +19,12 @@ function Home() {
           yearly appraisal.
         </Text>
       </Stack>
-      <OrderedList stylePosition="inside">
-        <ListItem>
-          <NextLink href="/introduction">
-            <Link bg="gray.200">Introduction</Link>.
-          </NextLink>
-        </ListItem>
-      </OrderedList>
+      <ModuleList
+        moduleList={[
+          {title: 'Introduction', href: '/introduction'},
+          {title: 'Snapshot Testing', href: '/snapshot-testing'},
+        ]}
+      />
     </>
   );
 }
