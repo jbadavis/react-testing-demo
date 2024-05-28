@@ -1,6 +1,4 @@
-declare module "*module.css" {
-  const styles: {
-    [className: string]: string;
-  };
+declare module '*module.css' {
+  const styles: Record<string, string>;
   export default styles;
 }
