@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home render 1`] = `
+<div>
+  <div
+    class="chakra-stack css-1kkt86i"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      Welcome to the Planes Internal Testing Demonstration.
+    </p>
+    <p
+      class="chakra-text css-0"
+    >
+      This is a core module and must be passed before your yearly appraisal.
+    </p>
+  </div>
+</div>
+`;
