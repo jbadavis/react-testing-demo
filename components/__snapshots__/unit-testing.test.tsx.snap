@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UnitTesting renders correctly 1`] = `
+<div>
+  <h2
+    class="chakra-heading css-jmbq56"
+  >
+    Unit Testing
+  </h2>
+  <div
+    class="chakra-stack css-1sam6cv"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      Unit testing is a process where the smallest functional units of code are tested. These units are usually functions or methods. The goal of unit testing is to validate that each unit of the software performs as intended.
+    </p>
+    <p
+      class="chakra-text css-0"
+    >
+      If there are input, output or logic-based errors in the code unit tests should help catch them before they reach production. When code is changed or refactored, unit tests can help ensure that the changes don't break the existing code.
+    </p>
+    <p
+      class="chakra-text css-0"
+    >
+      Unit tests are, in addition, an important way of documenting code. Developers can read the tests and understand what behavior is expected.
+    </p>
+  </div>
+  <h2
+    class="chakra-heading css-jmbq56"
+  >
+    Functional Programming
+  </h2>
+  <div
+    class="chakra-stack css-mbssy4"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      Functional programming helps us understand why some code is easier to test through concepts such as pure functions and side-effects.
+    </p>
+    <h3
+      class="chakra-heading css-0"
+    >
+      Pure Functions
+    </h3>
+    <div
+      class="chakra-stack css-mbssy4"
+    >
+      <p
+        class="chakra-text css-0"
+      >
+        Functions that only produce output based on their input, such as the below:
+        <code
+          class="chakra-code css-sef266"
+        >
+          const AddUp = (a: number, b: number) =&gt; a + b;
+        </code>
+        are extremely straightforward to test. This is because there are no implicit imputs, like the browser window or system clock. Functional programmers call this a 
+        <strong>
+          pure function
+        </strong>
+        .
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        Pure function are in addition deterministic. This means that given an input they will always return the same output. This produces unit tests that are consistent, giving additional confidence in the test suites.
+      </p>
+    </div>
+    <h3
+      class="chakra-heading css-0"
+    >
+      Side Effects
+    </h3>
+    <div
+      class="chakra-stack css-mbssy4"
+    >
+      <p
+        class="chakra-text css-0"
+      >
+        Functions that rely on data from the browser, system clock or write to the file system have what are known as side-effects. Without stubbing, these tests are non-deterministic, meaning their results depend on the time of day or the state of a network. Non-determinism in a test suite leads to intermittent failures and a loss of confidence.
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        Additionally, because these extra inputs and outputs are implicit, we don’t have any direct references to them in our tests which makes it harder to assert on them or to vary them for different scenarios.
+      </p>
+    </div>
+  </div>
+</div>
+`;
