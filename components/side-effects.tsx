@@ -18,12 +18,7 @@ function SideEffects() {
     async function getCat() {
       try {
         // The call to global.fetch below is a side effect
-        const response = await fetch(catUrl, {
-          headers: {
-            'x-api-key':
-              'live_dUAPokq8pMyv7jgTZYmamjYKwuILfvQ2hIZ0kAj9W9pXzHdMdbLmxMhQpTcEJzid',
-          },
-        });
+        const response = await fetch(catUrl);
 
         // Sleep is another side effect we need to mock
         await sleep(1000);
@@ -50,7 +45,7 @@ function SideEffects() {
           from the deepest reaches of the internet.
         </Text>
         {cat ? (
-          <Image src={cat.url} alt="A cat" width={400} />
+          <Image src={`${cat.url}?size=small`} alt="A cat" width={400} />
         ) : (
           <Text>Loading a cat...</Text>
         )}

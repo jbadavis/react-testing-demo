@@ -34,12 +34,6 @@ describe('SideEffects', () => {
       await waitFor(() => {
         expect(global.fetch).toHaveBeenCalledWith(
           'https://api.thecatapi.com/v1/images/search',
-          {
-            headers: {
-              'x-api-key':
-                'live_dUAPokq8pMyv7jgTZYmamjYKwuILfvQ2hIZ0kAj9W9pXzHdMdbLmxMhQpTcEJzid',
-            },
-          },
         );
       });
     });
