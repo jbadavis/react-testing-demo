@@ -3,16 +3,16 @@ import {Heading, Text, Stack, Image} from '@chakra-ui/react';
 import sleep from 'sleep-promise';
 
 type Cat = {
-  _id: string;
-  mimetype: string;
-  size: number;
-  tags: string[];
+  id: string;
+  url: string;
+  width: number;
+  height: number;
 };
 
-const catUrl = 'https://cataas.com/cat';
+const catUrl = 'https://api.thecatapi.com/v1/images/search';
 
 function SideEffects() {
-  const [cat, setCat] = useState<string | undefined>();
+  const [cat, setCat] = useState<Cat | undefined>();
 
   useEffect(() => {
     async function getCat() {
@@ -20,16 +20,17 @@ function SideEffects() {
         // The call to global.fetch below is a side effect
         const response = await fetch(catUrl, {
           headers: {
-            accept: 'application/json',
+            'x-api-key':
+              'live_dUAPokq8pMyv7jgTZYmamjYKwuILfvQ2hIZ0kAj9W9pXzHdMdbLmxMhQpTcEJzid',
           },
         });
 
         // Sleep is another side effect we need to mock
         await sleep(1000);
 
-        const data = (await response.json()) as Cat;
+        const data = (await response.json()) as Cat[];
 
-        setCat(data._id);
+        setCat(data[0]);
       } catch (error) {
         console.error("Couldn't get a cat", error);
       }
@@ -46,10 +47,10 @@ function SideEffects() {
       <Stack spacing={6} mb={6}>
         <Text>
           The component rendering this copy has a side effect. It fetches a cat
-          from the deepest reaches of the internet:
+          from the deepest reaches of the internet.
         </Text>
         {cat ? (
-          <Image src={`${catUrl}/${cat}?size=small`} alt="A cat" width={400} />
+          <Image src={cat.url} alt="A cat" width={400} />
         ) : (
           <Text>Loading a cat...</Text>
         )}

@@ -6,9 +6,11 @@ jest.mock('sleep-promise');
 
 const mockSleep = jest.mocked(sleep);
 
-const mockCatResponse = {
-  _id: 'mock-cat-id',
-};
+const mockCatResponse = [
+  {
+    url: 'http://foo.bar/mock-cat',
+  },
+];
 
 describe('SideEffects', () => {
   beforeEach(() => {
@@ -30,11 +32,15 @@ describe('SideEffects', () => {
       render(<SideEffects />);
 
       await waitFor(() => {
-        expect(global.fetch).toHaveBeenCalledWith('https://cataas.com/cat', {
-          headers: {
-            accept: 'application/json',
+        expect(global.fetch).toHaveBeenCalledWith(
+          'https://api.thecatapi.com/v1/images/search',
+          {
+            headers: {
+              'x-api-key':
+                'live_dUAPokq8pMyv7jgTZYmamjYKwuILfvQ2hIZ0kAj9W9pXzHdMdbLmxMhQpTcEJzid',
+            },
           },
-        });
+        );
       });
     });
 
@@ -53,7 +59,7 @@ describe('SideEffects', () => {
         'A cat',
       )) as unknown as HTMLImageElement;
 
-      expect(image.src).toContain(mockCatResponse._id);
+      expect(image.src).toContain(mockCatResponse[0].url);
     });
   });
 
