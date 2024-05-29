@@ -1,4 +1,11 @@
-import {Heading, Text, Stack, Code} from '@chakra-ui/react';
+import {
+  Heading,
+  Text,
+  Stack,
+  Code,
+  UnorderedList,
+  ListItem,
+} from '@chakra-ui/react';
 
 function UnitTesting() {
   return (
@@ -61,17 +68,19 @@ function UnitTesting() {
         </Heading>
         <Stack spacing={6}>
           <Text>
-            Functions that rely on data from the browser, system clock or write
-            to the file system have what are known as side-effects. Without
-            stubbing, these tests are non-deterministic, meaning their results
-            depend on the time of day or the state of a network. Non-determinism
-            in a test suite leads to intermittent failures and a loss of
-            confidence.
+            A function is said to have a side-effect if it uses or modifies
+            state outside its scope. This could be:
           </Text>
+          <UnorderedList>
+            <ListItem>Reading or writing to a file.</ListItem>
+            <ListItem>Network requests</ListItem>
+            <ListItem>Using the system clock</ListItem>
+          </UnorderedList>
           <Text>
-            Additionally, because these extra inputs and outputs are implicit,
-            we don’t have any direct references to them in our tests which makes
-            it harder to assert on them or to vary them for different scenarios.
+            Any tests written for functions with side-effects are
+            non-deterministic, meaning that results depend on the time of day or
+            the state of a network. Non-determinism in a test suite leads to
+            intermittent failures and a loss of confidence.
           </Text>
         </Stack>
       </Stack>

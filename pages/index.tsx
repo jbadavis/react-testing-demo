@@ -1,12 +1,4 @@
-import NextLink from 'next/link';
-import {
-  Link,
-  Heading,
-  Text,
-  Stack,
-  OrderedList,
-  ListItem,
-} from '@chakra-ui/react';
+import {Text, Stack} from '@chakra-ui/react';
 import ModuleList from '@/components/module-list';
 
 function Home() {
@@ -23,6 +15,7 @@ function Home() {
         moduleList={[
           {title: 'Introduction', href: '/introduction'},
           {title: 'Snapshot Testing', href: '/snapshot-testing'},
+          {title: 'Side-Effects', href: '/testing-side-effects'},
         ]}
       />
     </>

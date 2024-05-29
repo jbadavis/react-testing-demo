@@ -79,12 +79,32 @@ exports[`UnitTesting renders correctly 1`] = `
       <p
         class="chakra-text css-0"
       >
-        Functions that rely on data from the browser, system clock or write to the file system have what are known as side-effects. Without stubbing, these tests are non-deterministic, meaning their results depend on the time of day or the state of a network. Non-determinism in a test suite leads to intermittent failures and a loss of confidence.
+        A function is said to have a side-effect if it uses or modifies state outside its scope. This could be:
       </p>
+      <ul
+        class="css-tu0njr"
+        role="list"
+      >
+        <li
+          class="css-0"
+        >
+          Reading or writing to a file.
+        </li>
+        <li
+          class="css-0"
+        >
+          Network requests
+        </li>
+        <li
+          class="css-0"
+        >
+          Using the system clock
+        </li>
+      </ul>
       <p
         class="chakra-text css-0"
       >
-        Additionally, because these extra inputs and outputs are implicit, we don’t have any direct references to them in our tests which makes it harder to assert on them or to vary them for different scenarios.
+        Any tests written for functions with side-effects are non-deterministic, meaning that results depend on the time of day or the state of a network. Non-determinism in a test suite leads to intermittent failures and a loss of confidence.
       </p>
     </div>
   </div>

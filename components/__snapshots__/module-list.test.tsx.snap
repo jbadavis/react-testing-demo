@@ -12,11 +12,11 @@ exports[`ModuleList renders correctly 1`] = `
       <a
         href="/foo"
       >
-        <a
+        <span
           class="chakra-link css-1157erc"
         >
           Foo
-        </a>
+        </span>
         .
       </a>
     </li>
@@ -26,87 +26,11 @@ exports[`ModuleList renders correctly 1`] = `
       <a
         href="/bar"
       >
-        <a
+        <span
           class="chakra-link css-1157erc"
         >
           Bar
-        </a>
-        .
-      </a>
-    </li>
-  </ol>
-</div>
-`;
-
-exports[`ModuleList when a list of modules is provided renders correctly 1`] = `
-<div>
-  <ol
-    class="css-3p5u52"
-    role="list"
-  >
-    <li
-      class="css-0"
-    >
-      <a
-        href="/foo"
-      >
-        <a
-          class="chakra-link css-1157erc"
-        >
-          Foo
-        </a>
-        .
-      </a>
-    </li>
-    <li
-      class="css-0"
-    >
-      <a
-        href="/bar"
-      >
-        <a
-          class="chakra-link css-1157erc"
-        >
-          Bar
-        </a>
-        .
-      </a>
-    </li>
-  </ol>
-</div>
-`;
-
-exports[`ModuleList when a list of modules isn't provided renders correctly 1`] = `
-<div>
-  <ol
-    class="css-3p5u52"
-    role="list"
-  >
-    <li
-      class="css-0"
-    >
-      <a
-        href="/introduction"
-      >
-        <a
-          class="chakra-link css-1157erc"
-        >
-          Introduction
-        </a>
-        .
-      </a>
-    </li>
-    <li
-      class="css-0"
-    >
-      <a
-        href="/snapshot-testing"
-      >
-        <a
-          class="chakra-link css-1157erc"
-        >
-          Snapshot Testing
-        </a>
+        </span>
         .
       </a>
     </li>

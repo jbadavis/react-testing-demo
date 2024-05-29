@@ -3,7 +3,7 @@
 exports[`Home render 1`] = `
 <div>
   <div
-    class="chakra-stack css-1kkt86i"
+    class="chakra-stack css-1sam6cv"
   >
     <p
       class="chakra-text css-0"
@@ -13,8 +13,59 @@ exports[`Home render 1`] = `
     <p
       class="chakra-text css-0"
     >
-      This is a core module and must be passed before your yearly appraisal.
+      This is a core module and 
+      <strong>
+        must
+      </strong>
+       be passed before your yearly appraisal.
     </p>
   </div>
+  <ol
+    class="css-3p5u52"
+    role="list"
+  >
+    <li
+      class="css-0"
+    >
+      <a
+        href="/introduction"
+      >
+        <span
+          class="chakra-link css-1157erc"
+        >
+          Introduction
+        </span>
+        .
+      </a>
+    </li>
+    <li
+      class="css-0"
+    >
+      <a
+        href="/snapshot-testing"
+      >
+        <span
+          class="chakra-link css-1157erc"
+        >
+          Snapshot Testing
+        </span>
+        .
+      </a>
+    </li>
+    <li
+      class="css-0"
+    >
+      <a
+        href="/testing-side-effects"
+      >
+        <span
+          class="chakra-link css-1157erc"
+        >
+          Side-Effects
+        </span>
+        .
+      </a>
+    </li>
+  </ol>
 </div>
 `;
