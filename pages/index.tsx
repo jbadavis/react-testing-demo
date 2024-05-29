@@ -15,6 +15,7 @@ function Home() {
         moduleList={[
           {title: 'Introduction', href: '/introduction'},
           {title: 'Snapshot Testing', href: '/snapshot-testing'},
+          {title: 'User Interactions', href: '/testing-user-interactions'},
           {title: 'Side-Effects', href: '/testing-side-effects'},
         ]}
       />
