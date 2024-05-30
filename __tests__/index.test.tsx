@@ -1,9 +1,9 @@
 import {render} from '@testing-library/react';
-import Home from '@/pages/index';
+import App from '@/pages/index';
 
-describe('Home', () => {
-  test('render', () => {
-    const {container} = render(<Home />);
+describe('App', () => {
+  test('render correctly', () => {
+    const {container} = render(<App />);
 
     expect(container).toMatchSnapshot();
   });
