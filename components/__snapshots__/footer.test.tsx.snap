@@ -3,17 +3,20 @@
 exports[`Footer renders correctly 1`] = `
 <div>
   <div
-    class="css-rayotx"
+    class="css-16egoxs"
   >
-    <div
-      class="css-azx95j"
+    <a
+      class="chakra-button css-e9uyv7"
+      href="https://github.com/jbadavis/react-testing-demo"
+      target="_blank"
     >
-      <h4
-        class="chakra-heading css-1157erc"
-      >
-        Testing Demonstration 👻
-      </h4>
-    </div>
+      View on GitHub
+    </a>
+    <h4
+      class="chakra-heading css-0"
+    >
+      👻
+    </h4>
   </div>
 </div>
 `;

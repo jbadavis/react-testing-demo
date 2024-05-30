@@ -21,12 +21,12 @@ exports[`UserInteractions when button is not clicked render correctly 1`] = `
       Some Typing
     </h3>
     <input
-      class="chakra-input css-0"
+      class="chakra-input css-qg3jw4"
       data-testid="an-input"
       placeholder="Type something or else"
     />
     <p
-      class="chakra-text css-vmpf5w"
+      class="chakra-text css-xb55jf"
       data-testid="user-output"
     >
       <strong>
@@ -70,12 +70,12 @@ exports[`UserInteractions when text is inputted render correctly 1`] = `
       Some Typing
     </h3>
     <input
-      class="chakra-input css-0"
+      class="chakra-input css-qg3jw4"
       data-testid="an-input"
       placeholder="Type something or else"
     />
     <p
-      class="chakra-text css-vmpf5w"
+      class="chakra-text css-xb55jf"
       data-testid="user-output"
     >
       <strong>
@@ -120,12 +120,12 @@ exports[`UserInteractions when the button is clicked render correctly 1`] = `
       Some Typing
     </h3>
     <input
-      class="chakra-input css-0"
+      class="chakra-input css-qg3jw4"
       data-testid="an-input"
       placeholder="Type something or else"
     />
     <p
-      class="chakra-text css-vmpf5w"
+      class="chakra-text css-xb55jf"
       data-testid="user-output"
     >
       <strong>

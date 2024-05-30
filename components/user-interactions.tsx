@@ -27,8 +27,14 @@ function UserInteractions() {
           data-testid="an-input"
           onChange={handleOnChange}
           placeholder="Type something or else"
+          borderColor="gray.400"
         />
-        <Text py={4} data-testid="user-output" background="gray.100">
+        <Text
+          p={4}
+          data-testid="user-output"
+          background="gray.100"
+          borderRadius={10}
+        >
           <strong>You are typing:</strong> {textInput}
         </Text>
         <Heading as="h3" size="md">
