@@ -19,6 +19,11 @@ exports[`Home render 1`] = `
       </strong>
        be passed before your yearly appraisal.
     </p>
+    <h2
+      class="chakra-heading css-0"
+    >
+      Modules
+    </h2>
   </div>
   <ol
     class="css-3p5u52"
@@ -48,6 +53,20 @@ exports[`Home render 1`] = `
           class="chakra-link css-1157erc"
         >
           Snapshot Testing
+        </span>
+        .
+      </a>
+    </li>
+    <li
+      class="css-0"
+    >
+      <a
+        href="/testing-user-interactions"
+      >
+        <span
+          class="chakra-link css-1157erc"
+        >
+          User Interactions
         </span>
         .
       </a>
