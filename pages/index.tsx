@@ -1,4 +1,4 @@
-import {Text, Stack} from '@chakra-ui/react';
+import {Heading, Text, Stack} from '@chakra-ui/react';
 import ModuleList from '@/components/module-list';
 
 function Home() {
@@ -10,6 +10,9 @@ function Home() {
           This is a core module and <strong>must</strong> be passed before your
           yearly appraisal.
         </Text>
+        <Heading as="h2" size="lg">
+          Modules
+        </Heading>
       </Stack>
       <ModuleList
         moduleList={[

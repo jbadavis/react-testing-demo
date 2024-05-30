@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<div>
+  <div
+    class="css-1rcp8bt"
+  >
+    <div
+      class="css-azx95j"
+    >
+      <h4
+        class="chakra-heading css-1157erc"
+      >
+        Testing Demonstration 👻
+      </h4>
+    </div>
+  </div>
+</div>
+`;
