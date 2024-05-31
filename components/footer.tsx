@@ -16,7 +16,7 @@ function Footer() {
       >
         View on GitHub
       </Button>
-      <Heading as="h4" size="lg">
+      <Heading as="p" size="lg">
         👻
       </Heading>
     </Box>
