@@ -12,11 +12,11 @@ exports[`Footer renders correctly 1`] = `
     >
       View on GitHub
     </a>
-    <h4
+    <p
       class="chakra-heading css-0"
     >
       👻
-    </h4>
+    </p>
   </div>
 </div>
 `;

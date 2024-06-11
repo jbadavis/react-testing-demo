@@ -1,16 +1,20 @@
-import {render, waitFor, screen} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import sleep from 'sleep-promise';
+import useGetCat, {type Cat} from '../hooks/use-get-cat';
 import SideEffects from './side-effects';
 
 jest.mock('sleep-promise');
+jest.mock('../hooks/use-get-cat');
 
 const mockSleep = jest.mocked(sleep);
+const mockUseGetCat = jest.mocked(useGetCat);
 
-const mockCatResponse = [
-  {
-    url: 'http://foo.bar/mock-cat',
-  },
-];
+const mockCatResponse: Cat = {
+  id: 'an-id',
+  url: 'http://foo.bar/mock-cat',
+  height: 10,
+  width: 20,
+};
 
 describe('SideEffects', () => {
   beforeEach(() => {
@@ -21,62 +25,25 @@ describe('SideEffects', () => {
     jest.clearAllMocks();
   });
 
-  describe('when getCat resolves', () => {
-    beforeEach(() => {
-      global.fetch = jest.fn().mockImplementation(async () => ({
-        json: async () => mockCatResponse,
-      }));
-    });
-
-    test('call fetch correctly', async () => {
-      render(<SideEffects />);
-
-      await waitFor(() => {
-        expect(global.fetch).toHaveBeenCalledWith(
-          'https://api.thecatapi.com/v1/images/search',
-        );
-      });
-    });
-
-    test('call sleep correctly', async () => {
-      render(<SideEffects />);
-
-      await waitFor(() => {
-        expect(mockSleep).toHaveBeenCalledWith(1000);
-      });
-    });
-
+  describe('when getCat returns a cat', () => {
     test('render the cat correctly', async () => {
+      mockUseGetCat.mockReturnValueOnce(mockCatResponse);
+
       render(<SideEffects />);
 
       const image = (await screen.findByAltText(
         'A cat',
       )) as unknown as HTMLImageElement;
 
-      expect(image.src).toContain(mockCatResponse[0].url);
+      expect(image.src).toContain(mockCatResponse.url);
     });
   });
 
   describe('when getCat rejects', () => {
-    const mockError = new Error('mock error');
-
     beforeEach(() => {
-      jest.spyOn(console, 'error').mockImplementation();
-
-      global.fetch = jest.fn(async () => {
-        throw mockError;
-      }) as jest.Mock;
+      mockUseGetCat.mockReturnValueOnce(undefined);
 
       render(<SideEffects />);
-    });
-
-    test('call console.error', async () => {
-      await waitFor(() => {
-        expect(console.error).toHaveBeenCalledWith(
-          "Couldn't get a cat",
-          mockError,
-        );
-      });
     });
 
     test('not render the cat', () => {
